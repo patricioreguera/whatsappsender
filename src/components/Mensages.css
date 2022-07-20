@@ -1,0 +1,70 @@
+.mensages {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.658) ;
+    color: white;
+
+}
+
+
+.mensages button {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 5px 0px;
+    width: 300px;
+    color: var(--dark);
+}
+.mensages button:hover {
+    color: var(--dark);
+    box-shadow: rgba(0, 0, 0, 0.326) 0px 4px 10px;
+
+    background-color: white;
+}
+
+
+.mensage p{
+
+    transition: 2s;
+    margin: 0px;
+    border-radius: 50px;
+    font-size: 16px;
+
+}
+
+.mensages-predef {
+    display: flex;
+}
+.mensages-predef-off {
+    display: none;
+}
+
+.mensages-predef button {
+
+    margin-left: 10px;
+}
+
+#viewmore {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color: white;
+    background-color: var(--black);
+}
+#viewmore:hover{
+    background-color: rgba(0, 0, 0, 0.472);
+}
+
+
+@media only screen and (max-width: 900px){
+    .mensages-predef {
+        flex-direction: column;
+    
+    }
+}

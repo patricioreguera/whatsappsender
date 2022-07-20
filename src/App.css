@@ -1,38 +1,249 @@
-.App {
-  text-align: center;
+:root{
+    --primary : #25D366;
+    --secondary : #128C7E;
+    --dark : #075E54;
+    --blue: #34B7F1;
+    --inactive : rgb(199, 199, 199);
+    --black:rgb(35, 35, 35);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    padding: 0px;
+    margin: 0px;
+   height: 100vh;
+    background-image: url(./images/background.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: contain;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.App{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* <<<<<<<<<<<<<< LOGO y CABECERA >>>>>>>>>>>>>>>>*/
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.header h1 {
+    font-size: 20px;
+    padding: 0px;
+
+}
+.header h6 {
+    color: var(--primary);
+    font-size: 20px;
+    margin: 0px;
+   
+}
+.logo {
+    width: 30px;
+}
+/* <<<<<<<<<<<<<< FORM CONTAINER TOP >>>>>>>>>>>>>>>>*/
+.form-conteiner {
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px;
+   justify-content: center;
+   box-shadow: rgba(0, 0, 0, 0.326) 0px 4px 10px;
+
+}
+.form-name-phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-name-phone input{
+    border: none;
+    color: var(--dark);
+    margin: 5px ;
+    padding: 16px;
+    border-radius: 10px;
+  
+}
+
+/* <<<<<<<< BOTON INPUT Y ADD CLIENT >>>>>>>>>*/
+
+.form-inputtext-button {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+   
+}
+
+.form-inputtext-button input{
+    border: none;
+    padding :16px;
+    color: var(--dark);
+    border-radius: 10px;
+}
+
+.button-send-active{
+    border: none;
+    width: auto;
+    padding: 16px;
+    background-color: var(--primary);
+    color: white;
+    margin-left: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.214) 0px 4px 10px;
+}
+
+
+.button-send-inactive{
+    border: none;
+    width: auto;
+    padding: 16px;
+    background-color: var(--secondary);
+    color: white;
+    margin-left: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.214) 0px 4px 10px;
+}
+
+
+
+
+/* <<<<<<<<<<<<<< FORM CONTAINER TOP  END >>>>>>>>>>>>>>>>*/
+
+.client-list{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px 0px;
+    flex-wrap: wrap;
+}
+
+.client {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.326) 0px 4px 10px;
+    animation-name: intro;
+    animation-duration: 0.1s ;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes intro {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
   }
+
+
+.client-name-phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.client p {
+    background-color: rgb(245, 245, 245);
+    padding: 16px;
+    margin: 0px;
+    border-radius: 16px;
+    width: 260px;
 }
 
-.App-link {
-  color: #61dafb;
+.clients-butons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clients-butons button{
+    width: 30%;
+    max-width: 250px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+
+
+/* BOTONES CLIENTES */
+
+#edit-btn {
+ background-color:var(--inactive);
+ text-align: center;
+ color: white;
+}
+
+
+#delete-btn {
+    background-color: var(--inactive);
+    color: white;
+    text-align: center;
+}
+
+/* BOTON SEND ACTIVO E INACTIVO */
+
+
+.send-active {
+    background-color: var(--primary) ;
+    color: white;
+}
+.send-inactive {
+    background-color: rgb(47, 47, 47) ;
+    color: white;
+}
+
+
+
+
+/* <<<<<<<<<<<<<<< AJUSTES PARA MOVIL >>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+@media only screen and (max-width: 900px){
+    .form-conteiner {
+        background-color: var(--dark);
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+
+    .form-name-phone input{
+        width: 43%;
+    }
+
+
+
+    .form-inputtext-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        
+       
+    }
+ 
+    .form-inputtext-button button{
+        margin: 10px 0px 0px 0px;
+    } 
+ 
+
 }
